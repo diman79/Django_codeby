@@ -68,7 +68,7 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 SESSION_CACHE_ALIAS = 'session_store'
 SESSION_FILE_PATH = BASE_DIR / 'session'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # при закрытии браузера удаляет файлы сессии
-SESSION_COOKIE_AGE = 30
+SESSION_COOKIE_AGE = 3000
 SESSION_SAVE_EVERY_REQUEST = False
 SESSION_COOKIE_SAMESITE = 'Strict'
 

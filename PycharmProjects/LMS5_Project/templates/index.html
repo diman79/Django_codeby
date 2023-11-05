@@ -12,7 +12,7 @@
         {% for course in courses %}
             <div class="course_preview">
                 {{ course.get_absolute_url }}
-                <p><a href="{% url 'review' course.pk %}">{{ course.title|title }}</a> </p>
+                <p><a href="{% url 'detail' course.pk %}">{{ course.title|title }}</a> </p>
 
                 {% if not course.pk in request.session.favourites  or not request.session.favourites%}
                     <div class="favourite_container">
