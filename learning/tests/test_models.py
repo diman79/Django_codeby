@@ -1,5 +1,6 @@
 from django.test import TestCase, Client
 from learning.models import Course, Lesson, Tracking
+from LMS5_Project import settings
 
 
 class LearningModelsTestCase(TestCase):
@@ -10,5 +11,5 @@ class LearningModelsTestCase(TestCase):
         self.assertEqual(str(course), f'{course.title}: Старт {course.start_date}')
 
     def test_lesson_to_str(self):
-        lesson = Lesson.objects.get(title='Java для тестировщиков')
+        lesson = Lesson.objects.get(name='Java для тестировщиков')
         self.assertEqual(str(lesson), f'{lesson.course.title}: Урок {lesson.name}')
