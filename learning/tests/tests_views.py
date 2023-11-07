@@ -48,19 +48,19 @@ class LearningViewTestCase(TestCase):
         self.assertRedirects(response, reverse('login') + '?next=' + self.create, status_code=302)
 
     def test_get_create_view_not_permission_add_course(self):
-        login = self.client.login(username='3@3.ru', password='357')
+        login = self.client.login(username='6@6.ru', password='Faks@135')
         response = self.client.get(self.create)
         self.assertEqual(response.status_code, 403)
         self.assertTemplateUsed(response, "errors/403.html")
 
     def test_get_create_view(self):
-        login = self.client.login(username='3@3.ru', password='357')
+        login = self.client.login(username='6@6.ru', password='Faks@135')
         response = self.client.get(self.create)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "create.html")
 
     def test_post_create_view(self):
-        login = self.client.login(username='3@3.ru', password='549')
+        login = self.client.login(username='6@6.ru', password='Faks@135')
         response = self.client.post(self.create, data={
             'title': 'Тестировщик',
             'description': 'Тестировщик',

@@ -10,6 +10,7 @@ from django.conf import settings
 
 
 class User(AbstractUser):
+    username = None
     email = models.EmailField(unique=True, verbose_name='Email')
     birthday = models.DateField(verbose_name='Дата рождения', blank=False)
     description = models.TextField(verbose_name='Обо мне', null=True, blank=True, default='')

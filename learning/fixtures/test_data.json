@@ -10,7 +10,9 @@
         "price": 1500,
         "count_lessons": 9,
         "authors": [
-            10
+            [
+                "12@12.ru"
+            ]
         ]
     }
 },
@@ -25,7 +27,9 @@
         "price": 2000,
         "count_lessons": 6,
         "authors": [
-            10
+            [
+                "12@12.ru"
+            ]
         ]
     }
 },
@@ -40,7 +44,9 @@
         "price": 2900,
         "count_lessons": 8,
         "authors": [
-            10
+            [
+                "12@12.ru"
+            ]
         ]
     }
 },
@@ -55,7 +61,9 @@
         "price": 6500,
         "count_lessons": 11,
         "authors": [
-            10
+            [
+                "12@12.ru"
+            ]
         ]
     }
 },
@@ -70,7 +78,9 @@
         "price": 7900,
         "count_lessons": 10,
         "authors": [
-            10
+            [
+                "12@12.ru"
+            ]
         ]
     }
 },
@@ -85,7 +95,9 @@
         "price": 4500,
         "count_lessons": 7,
         "authors": [
-            10
+            [
+                "12@12.ru"
+            ]
         ]
     }
 },
@@ -100,7 +112,9 @@
         "price": 7500,
         "count_lessons": 7,
         "authors": [
-            10
+            [
+                "12@12.ru"
+            ]
         ]
     }
 },
