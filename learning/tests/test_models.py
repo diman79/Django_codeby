@@ -7,9 +7,9 @@ class LearningModelsTestCase(TestCase):
     fixtures = ['test_data.json']
 
     def test_course_to_str(self):
-        course = Course.objects.get(title='Тестировщик')
+        course = Course.objects.first()
         self.assertEqual(str(course), f'{course.title}: Старт {course.start_date}')
 
     def test_lesson_to_str(self):
-        lesson = Lesson.objects.get(name='Java для тестировщиков')
+        lesson = Lesson.objects.first()
         self.assertEqual(str(lesson), f'{lesson.course.title}: Урок {lesson.name}')

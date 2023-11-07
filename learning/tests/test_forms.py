@@ -32,4 +32,4 @@ class LearningModelsTestCase(TestCase):
     def test_Lesson_form_preview_length_error(self):
         form = LessonForm(data=self.data)
         self.assertFalse(form.is_valid())
-        self.assertRaisesMessage(ValidationError, 'Слишком длинное описание. Сократите до 200 символов')
+        self.assertRaisesMessage(ValidationError, 'Слишком длинное описание! Сократите до 200 символов')

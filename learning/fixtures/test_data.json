@@ -1,124 +1,5 @@
 [
 {
-    "model": "learning.course",
-    "pk": 25,
-    "fields": {
-        "title": "Frontend-разработчик с нуля до middle",
-        "description": "Frontend-разработчик с нуля до middle",
-        "start_date": "2023-11-05",
-        "duration": 9,
-        "price": 1500,
-        "count_lessons": 9,
-        "authors": [
-            [
-                "12@12.ru"
-            ]
-        ]
-    }
-},
-{
-    "model": "learning.course",
-    "pk": 26,
-    "fields": {
-        "title": "Тестировщик",
-        "description": "Тестировщик",
-        "start_date": "2023-11-05",
-        "duration": 6,
-        "price": 2000,
-        "count_lessons": 6,
-        "authors": [
-            [
-                "12@12.ru"
-            ]
-        ]
-    }
-},
-{
-    "model": "learning.course",
-    "pk": 27,
-    "fields": {
-        "title": "Java-разработчик с нуля",
-        "description": "Java-разработчик с нуля",
-        "start_date": "2023-10-05",
-        "duration": 8,
-        "price": 2900,
-        "count_lessons": 8,
-        "authors": [
-            [
-                "12@12.ru"
-            ]
-        ]
-    }
-},
-{
-    "model": "learning.course",
-    "pk": 28,
-    "fields": {
-        "title": "Разработчик на C++",
-        "description": "Разработчик на C++",
-        "start_date": "2023-11-09",
-        "duration": 11,
-        "price": 6500,
-        "count_lessons": 11,
-        "authors": [
-            [
-                "12@12.ru"
-            ]
-        ]
-    }
-},
-{
-    "model": "learning.course",
-    "pk": 29,
-    "fields": {
-        "title": "Сетевой инженер",
-        "description": "Сетевой инженер",
-        "start_date": "2023-11-05",
-        "duration": 10,
-        "price": 7900,
-        "count_lessons": 10,
-        "authors": [
-            [
-                "12@12.ru"
-            ]
-        ]
-    }
-},
-{
-    "model": "learning.course",
-    "pk": 30,
-    "fields": {
-        "title": "SQL и получение данных",
-        "description": "SQL и получение данных",
-        "start_date": "2023-11-07",
-        "duration": 7,
-        "price": 4500,
-        "count_lessons": 7,
-        "authors": [
-            [
-                "12@12.ru"
-            ]
-        ]
-    }
-},
-{
-    "model": "learning.course",
-    "pk": 31,
-    "fields": {
-        "title": "Разработчик игр на Unity",
-        "description": "Разработчик игр на Unity",
-        "start_date": "2023-11-27",
-        "duration": 7,
-        "price": 7500,
-        "count_lessons": 7,
-        "authors": [
-            [
-                "12@12.ru"
-            ]
-        ]
-    }
-},
-{
     "model": "learning.lesson",
     "pk": 16,
     "fields": {
@@ -638,6 +519,380 @@
         "course": 31,
         "name": "Прототипирование в Unity",
         "preview": "Прототипирование в Unity"
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$9tfLcVEn3gR4UghjDQvgzf$rVsi8ceOupr4qa4lbKl3XN1USRxkYeJzDcf1IK6cWLs=",
+        "last_login": "2023-11-07T15:54:14.560Z",
+        "is_superuser": true,
+        "first_name": "Дмитрий",
+        "last_name": "Шаронов",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-09-15T13:40:12Z",
+        "username": null,
+        "email": "1@1.ru",
+        "birthday": "1979-02-16",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Администратор"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "335",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "Иван",
+        "last_name": "Иванов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-05T12:45:49Z",
+        "username": null,
+        "email": "12@12.ru",
+        "birthday": "2000-11-09",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Автор"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "335",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "Петр",
+        "last_name": "Петров",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-05T12:46:57Z",
+        "username": null,
+        "email": "3@3.ru",
+        "birthday": "2004-09-06",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Модератор"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "335",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "Максим",
+        "last_name": "Максимов",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-05T12:48:20Z",
+        "username": null,
+        "email": "4@4.ru",
+        "birthday": "2002-07-20",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Ученик"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$7OZVBcCv1TIBC7QW6Mw3ao$Ro/5OnoA5Ys83FlxbR5j8TOW5PmqY7Zj2KP2Lh74TaU=",
+        "last_login": "2023-11-06T12:51:46.204Z",
+        "is_superuser": false,
+        "first_name": "Иван",
+        "last_name": "Петров",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-06T12:34:46.302Z",
+        "username": null,
+        "email": "6@6.ru",
+        "birthday": "1980-12-02",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Ученик"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$kHJJLsAqWwSdg7eI6w5Xrr$seIEtf88BSx/1v1NPtGyIvb8SEchwbSVBUrT9EixgEc=",
+        "last_login": "2023-11-07T14:49:01.377Z",
+        "is_superuser": false,
+        "first_name": "Иван",
+        "last_name": "Петров",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-07T14:49:01.215Z",
+        "username": null,
+        "email": "61@6.ru",
+        "birthday": "1980-12-02",
+        "description": "ww",
+        "avatar": "",
+        "groups": [
+            [
+                "Ученик"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$Q3bllwNW2giPc2ypSY9vD7$BHPtOPI0VScsB5ZL9blfKD1WtdrFNN7Lggu3cp4ZbyI=",
+        "last_login": "2023-11-07T14:49:49.137Z",
+        "is_superuser": false,
+        "first_name": "www",
+        "last_name": "wewe",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-07T14:49:48.986Z",
+        "username": null,
+        "email": "67@6.ru",
+        "birthday": "1980-12-02",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Ученик"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$cGdT52GIUTRveSbajjjUif$bB3gz6fEwET/8ERWL6+AlcfvFc/9aytQSQQHrGxMzu4=",
+        "last_login": "2023-11-07T15:44:23Z",
+        "is_superuser": false,
+        "first_name": "test",
+        "last_name": "test",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-07T15:44:22Z",
+        "username": null,
+        "email": "test@test.ru",
+        "birthday": "2023-11-07",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Автор"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$S8ISnvFQXEGm3lUbngHtmf$Xv4HPBpZ1IZk/Hl11YNJeVNwoj/i4CNfEyEGCSphw6w=",
+        "last_login": "2023-11-07T16:33:17.133Z",
+        "is_superuser": false,
+        "first_name": "test",
+        "last_name": "wwe",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-07T16:33:16.901Z",
+        "username": null,
+        "email": "111@1.ru",
+        "birthday": "1980-12-02",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Ученик"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth_app.user",
+    "fields": {
+        "password": "pbkdf2_sha256$600000$Zei0hzHzIbCD7ff07RYP6R$8DFBb4/XwaBrK3AGGjFnI1NcqcP9IelNuMqY83HkTGg=",
+        "last_login": "2023-11-07T16:33:53.769Z",
+        "is_superuser": false,
+        "first_name": "wewe",
+        "last_name": "wewe",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-11-07T16:33:53.614Z",
+        "username": null,
+        "email": "1111@1.ru",
+        "birthday": "1980-12-02",
+        "description": "",
+        "avatar": "",
+        "groups": [
+            [
+                "Ученик"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 25,
+    "fields": {
+        "title": "Frontend-разработчик с нуля до middle",
+        "description": "Frontend-разработчик с нуля до middle",
+        "start_date": "2023-11-05",
+        "duration": 9,
+        "price": 1500,
+        "count_lessons": 9,
+        "authors": [
+            [
+                "test@test.ru"
+            ],
+            [
+                "12@12.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 26,
+    "fields": {
+        "title": "Тестировщик",
+        "description": "Тестировщик",
+        "start_date": "2023-11-05",
+        "duration": 6,
+        "price": 2000,
+        "count_lessons": 6,
+        "authors": [
+            [
+                "12@12.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 27,
+    "fields": {
+        "title": "Java-разработчик с нуля",
+        "description": "Java-разработчик с нуля",
+        "start_date": "2023-10-05",
+        "duration": 8,
+        "price": 2900,
+        "count_lessons": 8,
+        "authors": [
+            [
+                "test@test.ru"
+            ],
+            [
+                "12@12.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 28,
+    "fields": {
+        "title": "Разработчик на C++",
+        "description": "Разработчик на C++",
+        "start_date": "2023-11-09",
+        "duration": 11,
+        "price": 6500,
+        "count_lessons": 11,
+        "authors": [
+            [
+                "test@test.ru"
+            ],
+            [
+                "12@12.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 29,
+    "fields": {
+        "title": "Сетевой инженер",
+        "description": "Сетевой инженер",
+        "start_date": "2023-11-05",
+        "duration": 10,
+        "price": 7900,
+        "count_lessons": 10,
+        "authors": [
+            [
+                "12@12.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 30,
+    "fields": {
+        "title": "SQL и получение данных",
+        "description": "SQL и получение данных",
+        "start_date": "2023-11-07",
+        "duration": 7,
+        "price": 4500,
+        "count_lessons": 7,
+        "authors": [
+            [
+                "test@test.ru"
+            ],
+            [
+                "12@12.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 31,
+    "fields": {
+        "title": "Разработчик игр на Unity",
+        "description": "Разработчик игр на Unity",
+        "start_date": "2023-11-27",
+        "duration": 7,
+        "price": 7500,
+        "count_lessons": 7,
+        "authors": [
+            [
+                "test@test.ru"
+            ],
+            [
+                "12@12.ru"
+            ]
+        ]
     }
 }
 ]

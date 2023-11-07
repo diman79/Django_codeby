@@ -21,25 +21,24 @@ class AuthAppTestCase(TestCase):
 
     def setUp(self) -> None:
         self.user_valid_register_data = {
-            'username': '3@3.ru',
-            'email': '3@3.ru',
-            'birthday': '2023-09-13',
-            'password': '357',
+            'username': 'test@test.ru',
+            'email': 'test@test.ru',
+            'birthday': '2023-11-07',
+            'password': 'Test@123',
         }
         self.user_invalid_register_data = {
             'username': 'student@example.com',
             'birthday': timezone.now().date(),
-            'password1': 'student1234',
-            'password2': 'student4321',
+            'password': 'student1234',
         }
         self.user_login_data_with_remember = {
-            'username': '3@3.ru',
-            'password': '357',
+            'username': 'test@test.ru',
+            'password': 'Test@123',
             'is_remember': 'on'
         }
         self.user_login_data_without_remember = {
-            'username': '3@3.ru',
-            'password': '357',
+            'username': 'test@test.ru',
+            'password': 'Test@123',
             'is_remember': 'off'
         }
         self.invalid_login_data = {

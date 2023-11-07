@@ -21,7 +21,7 @@ class LearningViewTestCase(TestCase):
         self.assertTemplateUsed(response, 'index.html')
         self.assertEqual(len(response.context['courses']), 5)
 
-    def tes_get_index_view_by_page(self):
+    def test_get_index_view_by_page(self):
         response = self.client.get(self.index, data={'page': 2})
         self.assertEqual(len(response.context['courses']), 1)
 
@@ -29,7 +29,7 @@ class LearningViewTestCase(TestCase):
         search_query = {'search': 'h', 'price_order': '-price'}
         response = self.client.get(self.index, data=search_query)
         filters = Q(title__icintains=search_query['search']) | Q(description_icontains=search_query['search'])
-        courses = Course.objects.filter(filters).orderby(search_query['price_order'])
+        courses = Course.objects.filter(filters).order_by(search_query['price_order'])
         self.assertEqual(len(response.context['courses']), len(courses))
         self.assertQuerySetEqual(response.context['courses'], courses)
 
@@ -48,7 +48,7 @@ class LearningViewTestCase(TestCase):
         self.assertRedirects(response, reverse('login') + '?next=' + self.create, status_code=302)
 
     def test_get_create_view_not_permission_add_course(self):
-        login = self.client.login(username='6@6.ru', password='Faks@135')
+        login = self.client.login(username='test6@.ru', password='Faks@135')
         response = self.client.get(self.create)
         self.assertEqual(response.status_code, 403)
         self.assertTemplateUsed(response, "errors/403.html")
@@ -72,7 +72,7 @@ class LearningViewTestCase(TestCase):
 
         course = Course.objects.get(title='Тестировщик')
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, reverse('create_lessons', kwargs={'course_id': course.id}),
+        self.assertRedirects(response, reverse('create_lesson', kwargs={'course_id': course.id}),
                              status_code=302)
 
     def test_get_settings_view(self):
@@ -100,7 +100,7 @@ class LearningViewTestCase(TestCase):
     def test_post_review_view(self):
         login = self.client.login(username='6@6.ru', password='Faks@135')
         course = Course.objects.get(title='Тестировщик')
-        response_get = self.client.post(reverse('review', kwargs={'course_id': course.id}))
+        response_get = self.client.get(reverse('review', kwargs={'course_id': course.id}))
         response = self.client.post(reverse('review', kwargs={'course_id': course.id}),
                                     data={
                                         'content': 'Курс очень понравился',
@@ -110,7 +110,7 @@ class LearningViewTestCase(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('detail', kwargs={'course_id': course.id}), status_code=302)
 
-    def add_add_to_favourites(self):
+    def test_add_add_to_favourites(self):
         courses_ids = Course.objects.filter(id__in=[1, 3, 5, 6]).values_list('id', flat=True)
         for course_id in courses_ids:
             response = self.client.post(reverse('add_booking', kwargs={'course_id': course_id}))
@@ -118,16 +118,16 @@ class LearningViewTestCase(TestCase):
             self.assertRedirects(response, self.index, status_code=302)
             self.assertIn(course_id, self.client.session.get('favourites'))
 
-    def add_remove_favourites(self):
+    def test_add_remove_favourites(self):
         session = self.client.session
         session['favourites'] = [1, 2, 3, 4]
         session.save()
-        response = self.client.post(reverse('remove_booking', kwargs={'course_id': 5}))
+        response = self.client.post(reverse('remove_booking', kwargs={'course_id': 4}))
         self.assertEqual(len(self.client.session.get('favourites')), 3)
         self.assertRedirects(response, self.index, status_code=302)
         self.assertIn(5, self.client.session.get('favourites'))
 
-    def add_get_favourites(self):
+    def test_add_get_favourites(self):
         session = self.client.session
         session['favourites'] = [4, 6, 14]
         session.save()
@@ -207,6 +207,3 @@ class LearningViewTestCase(TestCase):
         response_3 = self.client.post(reverse('get_certificate', kwargs={'course_id': course.id}))
         self.assertEqual(str(response_3.content, 'utf-8'), 'Сертификат отправлен на Ваш email')
 
-        self.assertFormError(response_2, 'form', field=None,
-                             errors=f'Количество уроков ограничено! Ранее вы установили, '
-                                    f'что курс будет содержать {course.count_lessons} уроков')

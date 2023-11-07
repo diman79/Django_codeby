@@ -10,14 +10,14 @@ from django.conf import settings
 
 
 class User(AbstractUser):
-    username = None
+    username = models.EmailField(unique=False, null=True)
     email = models.EmailField(unique=True, verbose_name='Email')
     birthday = models.DateField(verbose_name='Дата рождения', blank=False)
     description = models.TextField(verbose_name='Обо мне', null=True, blank=True, default='')
     avatar = models.ImageField(verbose_name='Фото', blank=True, upload_to=get_timestamp_path_user)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'birthday']
+    REQUIRED_FIELDS = ['birthday']
 
     class Meta:
         verbose_name_plural = 'Участники'
