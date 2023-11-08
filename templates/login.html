@@ -8,8 +8,12 @@
                 <table style="text-align: left;">
                     {% csrf_token %}
                      {{ form.as_table }}
+
                 </table>
+                <br>
+                <p><a href="{% url 'password_reset' %}" style="color: blue">Забыли пароль?</a></p>
                 <p><button type="submit">Войти</button></p>
+
             </form>
         </div>
     </div>

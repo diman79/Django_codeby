@@ -23,12 +23,14 @@ class MainView(ListView, FormView):
     context_object_name = 'courses'
     form_class = OrderByAndSearchForm
 
+    paginate_by = 4
+
     def get_queryset(self):
-        if 'courses' in cache:
-            queryset = cache.get('courses')
-        else:
-            queryset = MainView.queryset
-            cache.set('courses', queryset, timeout=0)
+        # if 'courses' in cache:
+          #  queryset = cache.get('courses')
+        #else:
+        queryset = MainView.queryset
+        #   cache.set('courses', queryset, timeout=0)
 
         search_query = self.request.GET.get('search', "")
         price_order_by = self.request.GET.get('price_order', "title")
@@ -42,8 +44,8 @@ class MainView(ListView, FormView):
         initial['price_order'] = self.request.GET.get('price_order', 'title')
         return initial
 
-    def get_paginate_by(self, queryset):
-        return self.request.COOKIES.get('paginate_by', 5)
+    # def get_paginate_by(self, queryset):
+      # return self.request.COOKIES.get('paginate_by', 4)
 
 
 class LessonCreateView(CreateView, LoginRequiredMixin, PermissionRequiredMixin):
@@ -217,7 +219,7 @@ def review(request, course_id):
 
 def add_booking(request, course_id):
     if request.method == 'POST':
-        favourites = request.session.get('favorites', list())
+        favourites = request.session.get('favourites', list())
         favourites.append(course_id)
         request.session['favourites'] = favourites
         request.session.modified = True
