@@ -114,7 +114,7 @@ class CourseCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
             course.save()
             course.authors.add(self.request.user)
             cache.delete('courses')
-            return redirect(reverse('create_lesson', kwargs={'course_id': self.object.id}))
+            return redirect(reverse('create_lesson', kwargs={'course_id': course.id}))
 
 
 class CourseDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):

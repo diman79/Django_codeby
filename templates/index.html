@@ -29,7 +29,7 @@
                     </form>
                     </div>
                 {% endif %}
-                <p>{{ request.session.favourites }}</p>
+                <p>{{ course.title }}</p>
                 <p>{{ course.start_date|date:"j E"  }}</p>
                 <p>{{ course.description|capfirst }}</p>
                 <p><span class="price">{{ course.price|default:"Бесплатно" }} рублей</span></p>
