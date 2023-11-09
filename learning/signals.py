@@ -21,7 +21,6 @@ def check_quantity(sender, instance, **kwargs):
 
     if actual_count == 0:
         queryset = Course.objects.all().filter(id=instance.course.id).values_list("count_lessons")
-        actual_count += 1
 
     print('actual_count = ', str(actual_count))
     set_count = queryset[0][0]
