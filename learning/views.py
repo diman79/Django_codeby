@@ -26,16 +26,13 @@ class MainView(ListView, FormView):
     paginate_by = 4
 
     def get_queryset(self):
-        # if 'courses' in cache:
-          #  queryset = cache.get('courses')
-        #else:
-        queryset = MainView.queryset
-        #   cache.set('courses', queryset, timeout=0)
-
         search_query = self.request.GET.get('search', "")
         price_order_by = self.request.GET.get('price_order', "title")
         filter1 = Q(title__icontains=search_query) | Q(description__icontains=search_query)
         queryset = MainView.queryset.filter(filter1).order_by(price_order_by)
+
+
+
         return queryset
 
     def get_initial(self):
@@ -44,8 +41,8 @@ class MainView(ListView, FormView):
         initial['price_order'] = self.request.GET.get('price_order', 'title')
         return initial
 
-    # def get_paginate_by(self, queryset):
-      # return self.request.COOKIES.get('paginate_by', 4)
+    def get_paginate_by(self, queryset):
+        return self.request.COOKIES.get('paginate_by', 4)
 
 
 class LessonCreateView(CreateView, LoginRequiredMixin, PermissionRequiredMixin):
@@ -112,7 +109,7 @@ class CourseCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
             course.save()
             course.authors.add(self.request.user)
             cache.delete('courses')
-            return reverse('create_lesson', kwargs={'course_id': self.object.id})
+            return redirect(reverse('create_lesson', kwargs={'course_id': self.object.id}))
 
 
 class CourseDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
