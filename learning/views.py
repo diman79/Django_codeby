@@ -26,12 +26,17 @@ class MainView(ListView, FormView):
     paginate_by = 4
 
     def get_queryset(self):
+
+        if 'courses' in cache:
+            queryset = cache.get('courses')
+        else:
+            queryset = MainView.queryset
+            cache.set('courses', queryset, timeout=30)
+
         search_query = self.request.GET.get('search', "")
         price_order_by = self.request.GET.get('price_order', "title")
         filter1 = Q(title__icontains=search_query) | Q(description__icontains=search_query)
         queryset = MainView.queryset.filter(filter1).order_by(price_order_by)
-
-
 
         return queryset
 
