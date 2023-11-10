@@ -110,8 +110,7 @@ class CourseCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
 
     def form_valid(self, form):
         with transaction.atomic():
-            course = form.save(commit=False)
-            course.save()
+            course = form.save(commit=True)
             course.authors.add(self.request.user)
             cache.delete('courses')
             return redirect(reverse('create_lesson', kwargs={'course_id': course.id}))

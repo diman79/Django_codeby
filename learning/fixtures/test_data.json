@@ -1,5 +1,395 @@
 [
 {
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "learning",
+        "model": "course"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "learning",
+        "model": "lesson"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "learning",
+        "model": "tracking"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth_app",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "learning",
+        "model": "review"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "12jpcww006ch263vlnoazvm5zhlt7yw6",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quxQp:c56AKZgjAszf3ljsH9AQmCzvWJmYaOWYlRut4OBmCH4",
+        "expire_date": "2023-10-23T16:06:01.534Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "18tdoj44xupjcn62sakwets1k5c5by35",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGXT:nNp4L5BmkG3c19Y9q0Jplv6jufEY3pQJRrdxT92dSco",
+        "expire_date": "2023-10-21T18:18:01.200Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "29nl0cicavm5o99mukvgr3tev7hqbexx",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quxHA:YG0git_EgnqaCurXV-zTL8IvElirKNJlgxlJC4tKo80",
+        "expire_date": "2023-10-23T15:56:02.956Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2jhgqx1yhsxcqvxwpvl42sc8ztpyt1uk",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFlm:U3iG-a9LyKsyLD3i0WvQaeGfCn23CtEpESwwt8QzB08",
+        "expire_date": "2023-10-21T17:28:44.476Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2pi112ch7ox5khacngztxxh73fu0roue",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFZv:5DYjUPIyt2MlRlsZ-fz2kZFih4jTkCD6gz5TgoQGIyQ",
+        "expire_date": "2023-10-21T17:16:29.047Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "3pakgy659ztmqzqplhcpb4jwjkqzyl59",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGJH:gIEV5D5A2wzw7rb-sr0jdr4PgFi2o8-tlJ8-UFLfYgw",
+        "expire_date": "2023-10-21T18:03:21.426Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "4d5y82txptwz4yta1lp9jwjnsihqiiyg",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quwky:DQj4j6TzaHvn4Br0vO9Mz9Bp2-jLCS-Goq3IFaEnH7Q",
+        "expire_date": "2023-10-23T15:22:46.089Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "54z5wahek85ueambz88ouxl7bkpg3b9j",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quxIA:Gwa42u0k6ww-VcvVCr7XhRKmD617vQIhmdobhGv8hYU",
+        "expire_date": "2023-10-23T15:57:04.436Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "710mlzmw2a9atx63yh6jfs9ge9r6tpj2",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGgs:5V42fBhqfutsXwItbpiCmpH-oapLV-92nBW_rSr-bPw",
+        "expire_date": "2023-10-21T18:27:44.358Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7q6syy0ok8n4fm35srxq7e5r31ia8ao4",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quxCl:kKWR0rSbFd0v_6rZsUO90okf4_EQhxP48jj7TEBvt0k",
+        "expire_date": "2023-10-23T15:51:29.608Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "91egp611kg9a3za0i8a3469og5w0ro0c",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quxB7:Hw0cYgH9DAdAtOqEASVTjjgcy0cFt7Z59V7WFpt1PMg",
+        "expire_date": "2023-10-23T15:49:47.261Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bcsldpgs1f9o0xnfp1jrjdp61b1cyvwt",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quwk4:UjzWkRFmTIdAfiSxec-EIEJXLQpOq-ihONUkeBYb3ro",
+        "expire_date": "2023-10-23T15:21:50.250Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bht8xhj6jgqanqqlg280ul11jo8gudgb",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quxAE:VIh6V7Nq8bg_DE6Zlzzb_HOpQWGHY11Ayebfi4CEj6g",
+        "expire_date": "2023-10-23T15:48:52.188Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bo5s1bogt3kh7fwmdu5xf9jq05nk9j0r",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe8ya9PQDrbI0r1naGbaQaqmNRQSjfHuSsKG7X_v_Q_4KrWmkr28nml6Q98cwNMyj36pMvkUoQcNu40p3CWvIN4oX4sKJc9TYrUqaqNVXUqUx3lzdwcj1fFft2xabTrCEAaM5FAHdIPEzlqyxrLRxwadZRR2ohENWdamjYEJ7XAK8P0BBhg_Iw:1qttEJ:C8wn--1PiyAw2CoZ4g2mLOZirtCXHu-PR8ifi6izpg0",
+        "expire_date": "2023-10-20T17:24:41.943Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "chhmd4r1h42upd6x140xorg1b6miavdh",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGYV:pOQ5zZbAhMlUWnDb_I3uyXmlZlesCcMndRWSP_dYDL0",
+        "expire_date": "2023-10-21T18:19:05.105Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "d566l34ifq5qcy278cm4smykj9hsoiu5",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1quwmX:aL80bUKX0_AKmFF9DvG32csTl0hqYAW4vXMVrRQMH_E",
+        "expire_date": "2023-10-23T15:24:23.732Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "d7bpxvq8fen0cd3h7b0rq9549lyvn5gm",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFag:mZO2Y5jjvDewSa-OIxzHACd5ctnLYuOhLqSA-KRcli8",
+        "expire_date": "2023-10-21T17:17:16.268Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "dpo7f0lbqm3n79d4nqt09v3g4vbwpr5q",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe8ya9PQDrbI0r1naGbaQaqmNRQSjfHuSsKG7X_v_Q_4KrWmkr28nml6Q98cwNMyj36pMvkUoQcNu40p3CWvIN4oX4sKJc9TYrUqaqNVXUqUx3lzdwcj1fFft2xabTrCEAaM5FAHdIPEzlqyxrLRxwadZRR2ohENWdamjYEJ7XAK8P0BBhg_Iw:1qttDf:kayAMK5xPJERHBAQGSbA7feN6AhTQjZIbmzW2zICMS4",
+        "expire_date": "2023-10-20T17:24:01.179Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "dq982w0t7y49ty0nnbrkso9yn4675hpp",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf9l1oa0lGeX7v0GMoVBUAOmtInG-O_apJtu7znnfsA1ai3X4uj1zPMbxu4EDtclubXR7HKAEXo4bBP6O5UNhBuWa2W-lmXOE9sUttPGLjXQ47y7h4OELW11z4kHTcajJ0KJaE1UYrC890YPUnJju0Eg8Q61oKjjn5NSIggjo0L4_gAgUT9c:1quFhP:e_ufgKyIX2tnBvl5N7EE8hAdyTDlbWTg2MDKNkrNqU0",
+        "expire_date": "2023-10-21T17:24:13.531Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "e577g1sy128um2qs1g15e3ndg80s7s3d",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFhy:ygvrg3YYvK5jQQqy-m8tHTcqsXqKW6RxzwL5mVGra2c",
+        "expire_date": "2023-10-21T17:24:48.961Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "g3w1nutx7mvmn2yq5jmbb9p595ny4n1d",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGf8:LmYKvz5A7VYCA1vmLcD3lrSPRrhX4DAC1dYaWBuWK1c",
+        "expire_date": "2023-10-21T18:25:56.483Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "h0v66pz3qms80hmnn6rb19fuzatjahxb",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGea:l0P7uz9jz_AWRKi1LqObPNWizWXO4rtnY-q7Lf73Rnk",
+        "expire_date": "2023-10-21T18:25:22.393Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "iz52xbkap3y3jghhzw45zwcy5g6556tv",
+    "fields": {
+        "session_data": ".eJxVjssOgyAURP-FdUMEeemy-34DucKl0jbSgPYR479XGzdu58yczExswVJiGix-njF_SVudiIVp7O1UMNvoSUsYOWQduDsOG_A3GK6JujSMOXZ0q9CdFnpJHh_nvXsQ9FD6bc04cq_ROHCIIAEaE5SoG86c0bWU3DRVLQB5BVpg0GHlqJTwwsigYJW-Ir4LaWfi0pQL_u-yZfkBc4FHmA:1quGik:H16Q8g18yasAWkK5eUZk-5Fwzj1rgY4WammApjITBE0",
+        "expire_date": "2023-10-21T18:29:40.375Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "k11t8ftm23v7sz5n07cqnw5dn2vcj5pu",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGcv:bFKan7v207e3DL2pADJ-XzIROYu8cVsZ2BxclzpsLi0",
+        "expire_date": "2023-10-21T18:23:39.209Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kr85h2sl34wtnwhal6cgye33o5u1b5q4",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFj2:vBYU4gX2jIC8eHpQB-vIWbUjJR_n9OWKzMUasoHHe4A",
+        "expire_date": "2023-10-21T17:25:54.652Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lyqg0xg0ci5slwb721v8lh7jd6gk06so",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQAP-yZ0OgUGh79O4byFJ2LWrAlDbRGP-uTXrpdWYyH_CVak0le3o90_yGQZ7A47pMfq00-xRhAAUHFnC8U95EvGG-FjGWvMwpiC0Ru63iUiI9znt7GExYp21retQGiY1iVqPlTivtXI-suTNRhyi5bVE2UbMlVG2Qzspe2X8ZsHHw_QEQKT8N:1qux34:o-Ix4odUrc8jrP_q_n2Yd_CkufCQ3vod-5QEVwA53Hc",
+        "expire_date": "2023-10-23T15:41:28.370Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lyssfxx9hayq3kh5a3kyqxnwt0fxl5ir",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGSI:U0Gdh4iPVCNnMs2Dq5TDwf03MS-3yB_7jrAV4CZxEUM",
+        "expire_date": "2023-10-21T18:12:40.088Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mtqen6ongigbalzzxavfh9rutf6xoulf",
+    "fields": {
+        "session_data": ".eJxVjssOgyAURP-FdUMEeemy-34DucKl0jbSgPYR479XGzdu58yczExswVJiGix-njF_SVudiIVp7O1UMNvoSUsYOWQduDsOG_A3GK6JujSMOXZ0q9CdFnpJHh_nvXsQ9FD6bc04cq_ROHCIIAEaE5SoG86c0bWU3DRVLQB5BVpg0GHlqJTwwsigYJW-Ir4LaWfi0pQL_u-yZfkBc4FHmA:1quGnX:BvAlywLCMmCa-2Y2woEIefc765H8ed4ilWbY-UO19Xk",
+        "expire_date": "2023-10-21T18:34:37.688Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rmanmbn5uafmxqtai2wuxn1pwe627nkm",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFcO:cA2syQpsXfbvwxqiFneSIGZ4OLU-OOupggw6-qtxk1Q",
+        "expire_date": "2023-10-21T17:19:02.478Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ruepz01s7bbv35udqiylooats0e02ghg",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFjy:9UVonUbGwQny29rzYSXBQeY9ug11rOFJLHVVM5Y5cng",
+        "expire_date": "2023-10-21T17:26:52.767Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "t0lbtl62u58ouc3khu7wsx5l1wa69zl6",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFbS:9NWgrrzLMQKPv9BvpcZvtjaU6oAqd8GvKTSoF2Bk4GU",
+        "expire_date": "2023-10-21T17:18:04.221Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "tn085ie4abcox7nyo6vuhwjk1akj398o",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe8ya9PQDrbI0r1naGbaQaqmNRQSjfHuSsKG7X_v_Q_4KrWmkr28nml6Q98cwNMyj36pMvkUoQcNu40p3CWvIN4oX4sKJc9TYrUqaqNVXUqUx3lzdwcj1fFft2xabTrCEAaM5FAHdIPEzlqyxrLRxwadZRR2ohENWdamjYEJ7XAK8P0BBhg_Iw:1qtt8m:JsTPZUXKVI0V0EnvX4bhqYLpCAfDGymYHm4v9sMcf0Y",
+        "expire_date": "2023-10-20T17:18:58.816Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ughr4d1hz4zqjwb0ppo75d7ljuju6tlv",
+    "fields": {
+        "session_data": ".eJxVjssOgyAURP-FdUMEeemy-34DucKl0jbSgPYR479XGzdu58yczExswVJiGix-njF_SVudiIVp7O1UMNvoSUsYOWQduDsOG_A3GK6JujSMOXZ0q9CdFnpJHh_nvXsQ9FD6bc04cq_ROHCIIAEaE5SoG86c0bWU3DRVLQB5BVpg0GHlqJTwwsigYJW-Ir4LaWfi0pQL_u-yZfkBc4FHmA:1quGoi:7VVUI9W9xQOt03kxFkeCjgiUPMyWVvqFSQ1wUzvQGaw",
+        "expire_date": "2023-10-21T18:35:50.024Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "uhuezy459bfsxxa221geqlblimk2tj04",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf9l1oa0lGeX7v0GMoVBUAOmtInG-O_apJtu7znnfsA1ai3X4uj1zPMbxu4EDtclubXR7HKAEXo4bBP6O5UNhBuWa2W-lmXOE9sUttPGLjXQ47y7h4OELW11z4kHTcajJ0KJaE1UYrC890YPUnJju0Eg8Q61oKjjn5NSIggjo0L4_gAgUT9c:1quFgJ:5rL7pvMrUzFGj3vmI0T7U248wpqiZJs1QJDyiJiDoGk",
+        "expire_date": "2023-10-21T17:23:05.594Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "uusx93ux17mnd2zfql8z15zk8hhnnrzh",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGQa:axPfV8hteWBKGYN7pAzHymNB-MhNmJh_N8F_OU7EtsI",
+        "expire_date": "2023-10-21T18:10:54.660Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vfghudd2hsikxlydt029x4aeit4i21ff",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQRO_iGln-4LVNSc8ZrF1_cADZUpxUiLuTSCmgmGbem3mzgOtSwzryHKbELgzY6bcjjM_cdpAe2O6dx96WeSK-K_ygg996yq_r4f4dVBx1W5dkspdO6GiFLxZJIsAWVMZEUSApkGDRFQ8ktPLo9VkAkE6knQDDPl_ZqDcW:1qjlQb:gc2bVjCQcanT_7NDvDYqfrwF_ExfWnaTo49pNuUlRnY",
+        "expire_date": "2023-10-06T19:03:01.979Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wje7abcvtap92ykw40q16zlrixvlntvt",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quFpp:MPm9b_dwafE_EOxUpp34YmxFYKG3UZk8XxSRWGfFW90",
+        "expire_date": "2023-10-21T17:32:55.693Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "yf41p9seafyjikvku3nzeags85f6zl1k",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe8ya9PQDrbI0r1naGbaQaqmNRQSjfHuSsKG7X_v_Q_4KrWmkr28nml6Q98cwNMyj36pMvkUoQcNu40p3CWvIN4oX4sKJc9TYrUqaqNVXUqUx3lzdwcj1fFft2xabTrCEAaM5FAHdIPEzlqyxrLRxwadZRR2ohENWdamjYEJ7XAK8P0BBhg_Iw:1qttG9:LoCznfgwZUShTv2Hew75qQgNDoiO1UzQZxT63jqgWB0",
+        "expire_date": "2023-10-20T17:26:35.309Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "yri919dpqye4bw8gov3pmpos63v11gzg",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSFleLt07zeQKQxSNZCUdmX8dyXpQrf3nHNfLOC-lbB3WsOS2JkJdvrdZowPqgOkO9Zb47HVbV1mPhR-0M6vLdHzcrh_BwV7GbUAgmTJRYxEqBG9y0ZJDyI6K7UG5yepkGBCqyjb_OVkjErK6WyQvT_3Zjgf:1quGfe:uuISSexhY1UKPel01MYh-m_7avZGrP1j7yGAnGFEfP0",
+        "expire_date": "2023-10-21T18:26:28.822Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "z0bztbrqtx8j8rauap837gwmxpvx6fpc",
+    "fields": {
+        "session_data": ".eJxVjEEOgjAQRe8ya9PQDrbI0r1naGbaQaqmNRQSjfHuSsKG7X_v_Q_4KrWmkr28nml6Q98cwNMyj36pMvkUoQcNu40p3CWvIN4oX4sKJc9TYrUqaqNVXUqUx3lzdwcj1fFft2xabTrCEAaM5FAHdIPEzlqyxrLRxwadZRR2ohENWdamjYEJ7XAK8P0BBhg_Iw:1qtt6A:Z6vWt9JDiwOeX80C2FuVBIgrZZbhuwLLakyMDCSKwmM",
+        "expire_date": "2023-10-20T17:16:16.955Z"
+    }
+},
+{
     "model": "learning.lesson",
     "pk": 16,
     "fields": {
@@ -522,18 +912,465 @@
     }
 },
 {
+    "model": "learning.lesson",
+    "pk": 74,
+    "fields": {
+        "course": 34,
+        "name": "1212",
+        "preview": "1212"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 75,
+    "fields": {
+        "course": 36,
+        "name": "2323",
+        "preview": "232323"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 76,
+    "fields": {
+        "course": 37,
+        "name": "12128486",
+        "preview": "46565"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 77,
+    "fields": {
+        "course": 38,
+        "name": "121284865555",
+        "preview": "44554"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 78,
+    "fields": {
+        "course": 39,
+        "name": "asasasas",
+        "preview": "sasas"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 79,
+    "fields": {
+        "course": 40,
+        "name": "15",
+        "preview": "58"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 80,
+    "fields": {
+        "course": 41,
+        "name": "1212qwwq",
+        "preview": "qwqwq"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 81,
+    "fields": {
+        "course": 42,
+        "name": "112",
+        "preview": "1212"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 82,
+    "fields": {
+        "course": 43,
+        "name": "212",
+        "preview": "1212"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 83,
+    "fields": {
+        "course": 44,
+        "name": "12112",
+        "preview": "12121"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 84,
+    "fields": {
+        "course": 46,
+        "name": "354646",
+        "preview": "1616"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 85,
+    "fields": {
+        "course": 47,
+        "name": "777",
+        "preview": "166"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 86,
+    "fields": {
+        "course": 48,
+        "name": "464",
+        "preview": "46546"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 87,
+    "fields": {
+        "course": 49,
+        "name": "wwq",
+        "preview": "q"
+    }
+},
+{
+    "model": "learning.lesson",
+    "pk": 88,
+    "fields": {
+        "course": 50,
+        "name": "23233232",
+        "preview": "2323"
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Администратор",
+        "permissions": [
+            [
+                "add_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "change_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "delete_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "view_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "add_group",
+                "auth",
+                "group"
+            ],
+            [
+                "change_group",
+                "auth",
+                "group"
+            ],
+            [
+                "delete_group",
+                "auth",
+                "group"
+            ],
+            [
+                "view_group",
+                "auth",
+                "group"
+            ],
+            [
+                "add_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "change_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "delete_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "view_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "add_user",
+                "auth_app",
+                "user"
+            ],
+            [
+                "change_user",
+                "auth_app",
+                "user"
+            ],
+            [
+                "delete_user",
+                "auth_app",
+                "user"
+            ],
+            [
+                "view_user",
+                "auth_app",
+                "user"
+            ],
+            [
+                "add_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "change_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "delete_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "view_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "add_course",
+                "learning",
+                "course"
+            ],
+            [
+                "change_course",
+                "learning",
+                "course"
+            ],
+            [
+                "delete_course",
+                "learning",
+                "course"
+            ],
+            [
+                "view_course",
+                "learning",
+                "course"
+            ],
+            [
+                "add_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "change_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "delete_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "view_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "add_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "change_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "delete_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "view_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "delete_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Автор",
+        "permissions": [
+            [
+                "add_course",
+                "learning",
+                "course"
+            ],
+            [
+                "change_course",
+                "learning",
+                "course"
+            ],
+            [
+                "delete_course",
+                "learning",
+                "course"
+            ],
+            [
+                "view_course",
+                "learning",
+                "course"
+            ],
+            [
+                "add_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "change_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "delete_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "view_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "add_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "change_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "delete_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "view_tracking",
+                "learning",
+                "tracking"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Ученик",
+        "permissions": [
+            [
+                "view_course",
+                "learning",
+                "course"
+            ],
+            [
+                "view_lesson",
+                "learning",
+                "lesson"
+            ],
+            [
+                "add_review",
+                "learning",
+                "review"
+            ],
+            [
+                "view_review",
+                "learning",
+                "review"
+            ],
+            [
+                "add_tracking",
+                "learning",
+                "tracking"
+            ],
+            [
+                "view_tracking",
+                "learning",
+                "tracking"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Модератор",
+        "permissions": [
+            [
+                "delete_course",
+                "learning",
+                "course"
+            ],
+            [
+                "delete_lesson",
+                "learning",
+                "lesson"
+            ]
+        ]
+    }
+},
+{
     "model": "auth_app.user",
     "fields": {
         "password": "pbkdf2_sha256$600000$9tfLcVEn3gR4UghjDQvgzf$rVsi8ceOupr4qa4lbKl3XN1USRxkYeJzDcf1IK6cWLs=",
-        "last_login": "2023-11-07T15:54:14.560Z",
+        "last_login": "2023-11-10T16:18:11.863Z",
         "is_superuser": true,
         "first_name": "Дмитрий",
         "last_name": "Шаронов",
         "is_staff": true,
         "is_active": true,
         "date_joined": "2023-09-15T13:40:12Z",
-        "username": null,
-        "email": "1@1.ru",
+        "username": "sharonov-db@yandex.ru",
+        "email": "sharonov-db@yandex.ru",
         "birthday": "1979-02-16",
         "description": "",
         "avatar": "",
@@ -621,7 +1458,7 @@
     "model": "auth_app.user",
     "fields": {
         "password": "pbkdf2_sha256$600000$7OZVBcCv1TIBC7QW6Mw3ao$Ro/5OnoA5Ys83FlxbR5j8TOW5PmqY7Zj2KP2Lh74TaU=",
-        "last_login": "2023-11-06T12:51:46.204Z",
+        "last_login": "2023-11-08T18:31:56.463Z",
         "is_superuser": false,
         "first_name": "Иван",
         "last_name": "Петров",
@@ -645,15 +1482,15 @@
     "model": "auth_app.user",
     "fields": {
         "password": "pbkdf2_sha256$600000$kHJJLsAqWwSdg7eI6w5Xrr$seIEtf88BSx/1v1NPtGyIvb8SEchwbSVBUrT9EixgEc=",
-        "last_login": "2023-11-07T14:49:01.377Z",
+        "last_login": "2023-11-07T14:49:01Z",
         "is_superuser": false,
         "first_name": "Иван",
         "last_name": "Петров",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2023-11-07T14:49:01.215Z",
-        "username": null,
-        "email": "61@6.ru",
+        "date_joined": "2023-11-07T14:49:01Z",
+        "username": "sharonov-db@ya.ru",
+        "email": "sharonov-db@ya.ru",
         "birthday": "1980-12-02",
         "description": "ww",
         "avatar": "",
@@ -893,6 +1730,2565 @@
                 "12@12.ru"
             ]
         ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 34,
+    "fields": {
+        "title": "Test",
+        "description": "qwqww",
+        "start_date": "2023-11-25",
+        "duration": 2,
+        "price": 1111,
+        "count_lessons": 2,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 36,
+    "fields": {
+        "title": "Test23",
+        "description": "Test23",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 2222,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 37,
+    "fields": {
+        "title": "444",
+        "description": "543543",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 111,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 38,
+    "fields": {
+        "title": "Test5",
+        "description": "Test5",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 107,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 39,
+    "fields": {
+        "title": "Test6",
+        "description": "Test6",
+        "start_date": "2023-11-25",
+        "duration": 2,
+        "price": 2218,
+        "count_lessons": 2,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 40,
+    "fields": {
+        "title": "yrrr32323",
+        "description": "2454",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 41,
+    "fields": {
+        "title": "qqw",
+        "description": "qwqw",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 42,
+    "fields": {
+        "title": "xxxxxxxxxxxx",
+        "description": "xxxxxxxxxxxx",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 43,
+    "fields": {
+        "title": "qqqqqqqq",
+        "description": "qqq",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 44,
+    "fields": {
+        "title": "cxcx",
+        "description": "zzxz",
+        "start_date": "2023-11-25",
+        "duration": 2,
+        "price": 2,
+        "count_lessons": 2,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 46,
+    "fields": {
+        "title": "Test666",
+        "description": "564646",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 47,
+    "fields": {
+        "title": "Test77",
+        "description": "6464",
+        "start_date": "2023-11-12",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 48,
+    "fields": {
+        "title": "Test99",
+        "description": "45554",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 49,
+    "fields": {
+        "title": "Test99999",
+        "description": "w",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 1,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "learning.course",
+    "pk": 50,
+    "fields": {
+        "title": "Test98",
+        "description": "eer",
+        "start_date": "2023-11-25",
+        "duration": 1,
+        "price": 3,
+        "count_lessons": 1,
+        "authors": [
+            [
+                "sharonov-db@yandex.ru"
+            ]
+        ]
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-09-22T19:17:49.148Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "1",
+        "object_repr": "Django: Старт 2023-09-20",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-09-22T19:18:08.630Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "1",
+        "object_repr": "Django: Старт 2023-09-20: Урок Урок 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-09-22T19:18:20.996Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "2",
+        "object_repr": "Django: Старт 2023-09-20: Урок Урок 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-09-22T19:18:57.224Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "2",
+        "object_repr": "Javascript: Старт 2023-09-20",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-09-22T19:19:21.789Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "3",
+        "object_repr": "Javascript: Старт 2023-09-20: Урок Урок 1_Js",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-09-22T19:19:37.423Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "4",
+        "object_repr": "Javascript: Старт 2023-09-20: Урок Урок 2_Js",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-10-02T09:11:53.088Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "1",
+        "object_repr": "Администратор",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-10-02T09:12:54.167Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "2",
+        "object_repr": "Автор",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-10-02T09:14:13.128Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Ученик",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-10-02T09:16:53.143Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "Участник  : 1@1.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-10-02T09:17:54.240Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "Участник Петр Петров: 2@2.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-10-02T09:18:31.554Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "Участник Сидор Сидоров: 3@3.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-10-02T10:06:38.255Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "Участник Сидор Сидоров: 3@3.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-10-06T14:31:29.478Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Ученик",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-10-09T16:15:46.180Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "1",
+        "object_repr": "Django: Старт 2023-09-20",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440 \\u043a\\u0443\\u0440\\u0441\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-10-21T17:19:01.784Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "23",
+        "object_repr": "Test: Старт 2023-10-21",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-10-21T17:22:59.775Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "5",
+        "object_repr": "Test: Старт 2023-10-21: Урок Урок 1:23",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-10-21T18:25:00.686Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "6",
+        "object_repr": "Test: Старт 2023-10-21: Урок Урок 2:wee",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-10-21T18:25:17.815Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "7",
+        "object_repr": "Test: Старт 2023-10-21: Урок Урок 3:wew",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-10-21T18:25:37.520Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "8",
+        "object_repr": "Test: Старт 2023-10-21: Урок Урок 4:we",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-10-21T18:27:27.611Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "9",
+        "object_repr": "Test: Старт 2023-10-21: Урок Урок 1w",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-10-21T18:28:17.851Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "10",
+        "object_repr": "Test: Старт 2023-10-21: Урок wwewewe",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-10-30T16:10:16.179Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "24",
+        "object_repr": "Django_4: Старт 2023-10-30",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-10-30T16:11:17.436Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "14",
+        "object_repr": "Django_4: Старт 2023-10-30: Урок Django_4: Урок 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2023-10-30T16:11:29.194Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "15",
+        "object_repr": "Django_4: Старт 2023-10-30: Урок Django_4: Урок 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2023-10-30T16:17:00.360Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "Участник Сидор Сидоров: 3@3.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2023-11-05T12:36:20.812Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "9",
+        "object_repr": "Участник Иван Иванов: 22@1.ru",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.495Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "6",
+        "object_repr": "1: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.505Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "18",
+        "object_repr": "23: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.511Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "21",
+        "object_repr": "2323: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.516Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "22",
+        "object_repr": "333434: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.521Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "20",
+        "object_repr": "34: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.535Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "19",
+        "object_repr": "4: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.542Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "9",
+        "object_repr": "44: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.547Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "11",
+        "object_repr": "444: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.551Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "17",
+        "object_repr": "55: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.559Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "12",
+        "object_repr": "555: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.565Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "13",
+        "object_repr": "66: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.570Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "14",
+        "object_repr": "7: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.577Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "15",
+        "object_repr": "88: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.582Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "16",
+        "object_repr": "99: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.586Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "1",
+        "object_repr": "Django: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.595Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "24",
+        "object_repr": "Django_4: Старт 2023-10-30",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.602Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "7",
+        "object_repr": "qwqwq: Старт 2022-12-10",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.611Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "23",
+        "object_repr": "Test: Старт 2023-10-21",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-11-05T12:42:54.619Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "8",
+        "object_repr": "wwwwwwwww: Старт 2023-09-20",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-11-05T12:44:42.642Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "9",
+        "object_repr": "Участник Иван Иванов: 22@1.ru",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-11-05T12:44:42.649Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "8",
+        "object_repr": "Участник Перс Персов: 4@4.ru",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-11-05T12:44:42.654Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "Участник Петр Петров: 2@2.ru",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2023-11-05T12:44:42.674Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "Участник Сидор Сидоров: 3@3.ru",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2023-11-05T12:45:18.567Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "Участник Дмитрий Шаронов: sharonov-db@mail.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2023-11-05T12:46:41.942Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "10",
+        "object_repr": "Участник Иван Иванов: 1@1.ru",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2023-11-05T12:48:08.803Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "11",
+        "object_repr": "Участник Петр Петров: 3@3.ru",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2023-11-05T12:49:16.051Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "12",
+        "object_repr": "Участник Максим Максимов: 4@4.ru",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2023-11-05T12:52:55.798Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "25",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2023-11-05T12:53:25.950Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "16",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок HTML-вёрстка",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2023-11-05T12:56:18.168Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "17",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Мобильная и адаптивная вёрстка",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2023-11-05T12:56:34.586Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "18",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Основы программирования",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2023-11-05T12:56:47.920Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "19",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Git — система контроля версий",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2023-11-05T12:56:58.974Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "20",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Основы JavaScript",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2023-11-05T12:57:14.809Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "21",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Основы JavaScript в браузере",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2023-11-05T12:57:25.496Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "22",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Продвинутый JavaScript",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2023-11-05T12:57:39.486Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "23",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Продвинутый JavaScript в браузере",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2023-11-05T12:57:50.417Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "24",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05: Урок Библиотека React",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2023-11-05T12:58:29.619Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "26",
+        "object_repr": "Тестировщик: Старт 2023-11-05",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2023-11-05T12:58:49.707Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "25",
+        "object_repr": "Тестировщик: Старт 2023-11-05: Урок Ручное тестирование веб-приложений",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2023-11-05T12:58:59.991Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "26",
+        "object_repr": "Тестировщик: Старт 2023-11-05: Урок Вёрстка сайта на HTML и CSS",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2023-11-05T13:00:51.909Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "27",
+        "object_repr": "Тестировщик: Старт 2023-11-05: Урок Git - система контроля версий",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2023-11-05T13:01:02.318Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "28",
+        "object_repr": "Тестировщик: Старт 2023-11-05: Урок Java для тестировщиков",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-11-05T13:01:14.132Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "29",
+        "object_repr": "Тестировщик: Старт 2023-11-05: Урок Английский язык для начинающих разработчиков",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-11-05T13:01:24.691Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "30",
+        "object_repr": "Тестировщик: Старт 2023-11-05: Урок Автоматизированное тестирование",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-11-05T13:02:31.103Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "27",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-11-05T13:02:47.063Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "31",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Основы Java",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-11-05T13:03:01.695Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "32",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Объектно-ориентированное программирование в Java",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-11-05T13:03:19.421Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "33",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Git",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-11-05T13:03:29.241Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "34",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Java Core",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-11-05T13:03:39.734Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "35",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Шаблоны проектирования",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-11-05T13:03:51.626Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "36",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Многопоточное и функциональное программирование",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-11-05T13:04:07.590Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "37",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Spring Boot, deployment и инфраструктура",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-11-05T13:04:20.560Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "38",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05: Урок Spring: хранение данных и организация безопасности",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-11-05T13:05:33.462Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "28",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-11-05T13:05:47.485Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "39",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Основы программирования на C++",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-11-05T13:06:03.593Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "40",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Система контроля версий Gi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-11-05T13:06:14.487Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "41",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Базовое программирование на C++",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-11-05T13:06:25.023Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "42",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Алгоритмы и структуры данных",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-11-05T13:06:34.793Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "43",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Продвинутое программирование на C++",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-11-05T13:06:44.178Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "44",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Работа с базами данных",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-11-05T13:07:04.948Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "45",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Многопоточное и асинхронное программирование",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-11-05T13:07:14.833Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "46",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Шаблоны проектирования в C++",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-11-05T13:07:24.287Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "47",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Кроссплатформенная разработка на Qt",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-11-05T13:07:32.793Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "48",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Разработка умных гаджетов (IoT)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-11-05T13:07:46.631Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "49",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09: Урок Разработка видеоигр на Unreal Engine 5",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2023-11-05T13:08:15.637Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "29",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2023-11-05T13:08:30.137Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "50",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Введение в сетевые технологии",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2023-11-05T13:08:39.590Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "51",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Основы коммутации и маршрутизации",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2023-11-05T13:08:48.774Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "52",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Построение отказоустойчивых сетей",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2023-11-05T13:09:00.989Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "53",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Динамическая маршрутизация",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2023-11-05T13:09:10.307Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "54",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Сетевая безопасность",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2023-11-05T13:09:19.563Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "55",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Беспроводные сети",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2023-11-05T13:09:29.959Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "56",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Методы обеспечения качества обслуживания (QoS)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2023-11-05T13:09:41.804Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "57",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Основы проектирования корпоративных сетей",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2023-11-05T13:09:49.849Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "58",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Инструменты эксплуатации",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2023-11-05T13:10:00.844Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "59",
+        "object_repr": "Сетевой инженер: Старт 2023-11-05: Урок Основы IP-телефонии",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2023-11-05T13:21:45.483Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "30",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2023-11-05T13:21:58.663Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "60",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07: Урок Введение в SQL. Установка ПО",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2023-11-05T13:22:19.944Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "61",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07: Урок Работа с базами данных_",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2023-11-05T13:22:30.869Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "62",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07: Урок Основы SQL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2023-11-05T13:22:42.675Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "63",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07: Урок Углубление в SQL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2023-11-05T13:22:52.977Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "64",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07: Урок Работа с PostgresSQL. Часть 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2023-11-05T13:23:02.401Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "65",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07: Урок Работа с PostgresSQL. Часть 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2023-11-05T13:23:17.178Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "66",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07: Урок Продвинутый SQL",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2023-11-05T13:24:17.602Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "31",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2023-11-05T13:24:33.838Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "67",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27: Урок Как устроена игра",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2023-11-05T13:24:42.487Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "68",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27: Урок Введение в профессию",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2023-11-05T13:24:51.204Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "69",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27: Урок Работа с редактором Unity",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2023-11-05T13:25:03.661Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "70",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27: Урок Программирование на C#",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2023-11-05T13:25:14.717Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "71",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27: Урок C# в Unity",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2023-11-05T13:25:23.910Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "72",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27: Урок Разработка игры на Unity",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2023-11-05T13:25:34.787Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "lesson"
+        ],
+        "object_id": "73",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27: Урок Прототипирование в Unity",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2023-11-06T13:51:55.054Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "10",
+        "object_repr": "Участник Иван Иванов: 12@12.ru",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2023-11-07T15:54:31.326Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "16",
+        "object_repr": "Участник test test: test@test.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2023-11-07T15:54:45.189Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "25",
+        "object_repr": "Frontend-разработчик с нуля до middle: Старт 2023-11-05",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440 \\u043a\\u0443\\u0440\\u0441\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2023-11-07T15:54:50.204Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "27",
+        "object_repr": "Java-разработчик с нуля: Старт 2023-10-05",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440 \\u043a\\u0443\\u0440\\u0441\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2023-11-07T15:54:55.090Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "30",
+        "object_repr": "SQL и получение данных: Старт 2023-11-07",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440 \\u043a\\u0443\\u0440\\u0441\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2023-11-07T15:55:06.778Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "31",
+        "object_repr": "Разработчик игр на Unity: Старт 2023-11-27",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440 \\u043a\\u0443\\u0440\\u0441\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2023-11-07T15:55:26.424Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "learning",
+            "course"
+        ],
+        "object_id": "28",
+        "object_repr": "Разработчик на C++: Старт 2023-11-09",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440 \\u043a\\u0443\\u0440\\u0441\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2023-11-10T15:37:32.004Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "Участник Дмитрий Шаронов: sharonov-db@yandex.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"Email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2023-11-10T15:49:45.905Z",
+        "user": [
+            "sharonov-db@yandex.ru"
+        ],
+        "content_type": [
+            "auth_app",
+            "user"
+        ],
+        "object_id": "14",
+        "object_repr": "Участник Иван Петров: sharonov-db@ya.ru",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"Email\"]}}]"
     }
 }
 ]
