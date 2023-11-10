@@ -13,21 +13,10 @@ get_certificate = Signal()
 
 
 def check_quantity(sender, instance, **kwargs):
-    queryset = (sender.objects.all().filter(course=instance.course).select_related('course').
-                values_list("course__count_lessons"))
+    error = None
 
-    actual_count = queryset.count()
-    print('actual_count = ', str(actual_count))
-
-    if actual_count == 0:
-        queryset = Course.objects.all().filter(id=instance.course.id).values_list("count_lessons")
-
-    print('actual_count = ', str(actual_count))
-    set_count = queryset[0][0]
-    print('set_count = ', str(set_count))
-
-    # actual_count = sender.objects.filter(course=instance.course).count()
-    # set_count = Course.objects.filter(id=instance.course.id).values('count_lessons')[0]['count_lessons']
+    actual_count = sender.objects.filter(course=instance.course).count()
+    set_count = Course.objects.filter(id=instance.course.id).values('count_lessons')[0]['count_lessons']
 
     if actual_count >= set_count:
         error = f'Количество уроков ограничено! '\
