@@ -36,6 +36,7 @@ class LessonSerializer2(ModelSerializer):
 
 class TrackingSerializer2(ModelSerializer):
     lesson = serializers.StringRelatedField(many=False)
+    user = UserSerializer(many=False)
 
     class Meta:
         model = Tracking
