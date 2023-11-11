@@ -52,7 +52,7 @@ def send_enroll_email(**kwargs):
 def send_user_certificate(**kwargs):
     template_name = 'emails/certificate_email.html'
     context = {
-        'massage': 'Поздравляем! Вы успешно закончили курс.\nВо вложении прилагаем сертификат о прохождении'
+        'message': 'Поздравляем! Вы успешно закончили курс.\nВо вложении прилагаем сертификат о прохождении'
     }
     email = EmailMultiAlternatives(subject='Сертификат о прохождении курса | Платформа Codeby',
                                    to=[kwargs['sender'].email])
