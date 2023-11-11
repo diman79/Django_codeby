@@ -27,6 +27,7 @@ class User(AbstractUser):
     def __str__(self):
         return f'Участник {self.first_name} {self.last_name}: {self.email}'
 
-
+    def natural_key(self):
+        return self.get_full_name()
 
 
