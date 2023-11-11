@@ -12,4 +12,4 @@ class LearningModelsTestCase(TestCase):
 
     def test_lesson_to_str(self):
         lesson = Lesson.objects.first()
-        self.assertEqual(str(lesson), f'{lesson.course.title}: Урок {lesson.name}')
+        self.assertEqual(str(lesson), f'{lesson.course.title}: Старт {lesson.course.start_date}: Урок {lesson.name}')

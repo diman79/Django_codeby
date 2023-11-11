@@ -19,8 +19,7 @@ def check_quantity(sender, instance, **kwargs):
     set_count = Course.objects.filter(id=instance.course.id).values('count_lessons')[0]['count_lessons']
 
     if actual_count >= set_count:
-        error = f'Количество уроков ограничено! '\
-                f'Ранее вы установили, что курс будет содержать {set_count} уроков '
+        error = f'Количество уроков ограничено! Ранее вы установили, что курс будет содержать {set_count} уроков'
         return error
 
 
