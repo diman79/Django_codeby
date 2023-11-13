@@ -28,7 +28,7 @@ def incr_views(sender, **kwargs):
     views = session.setdefault('views', {})
     course_id = str(kwargs['id'])
     count = views.get(course_id, 0)
-    views['course_id'] = count + 1
+    views[course_id] = count + 1
     session['views'] = views
     session.modified = True
 

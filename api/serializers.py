@@ -142,7 +142,7 @@ class UserSerializer(ModelSerializer):
         data['last_name'] = ""
         return data
 
-    def validate(selfself, data):
+    def validate(self, data):
         errors = []
         name = data.get('name').split()
         if not name or len(name) ==1:
