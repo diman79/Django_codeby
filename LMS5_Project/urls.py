@@ -34,6 +34,7 @@ urlpatterns = [
     path('auth/', include('auth_app.urls')),
     path('courses/', include('learning.urls')),
     path('api/', include('api.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
 
 if settings.DEBUG:
