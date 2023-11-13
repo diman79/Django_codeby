@@ -11,6 +11,6 @@ class AnalyticReport(object):
         self.course = course
         self.views = views
         self.count_students = count_students
-        self. percent_passed = percent_passed
+        self.percent_passed = percent_passed
         self.date = date
         self.url = url

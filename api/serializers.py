@@ -107,7 +107,7 @@ class AnalyticCourseSerializer(Serializer):
 
 class AnalyticSerializer(Serializer):
     report_date = serializers.SerializerMethodField()
-    date = serializers.SerializerMethodField()
+    data = serializers.SerializerMethodField()
 
     def get_report_date(self, instance):
         return datetime.now()
