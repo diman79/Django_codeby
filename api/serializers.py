@@ -112,7 +112,7 @@ class AnalyticSerializer(Serializer):
     def get_report_date(self, instance):
         return datetime.now()
 
-    def get_date(self, instance):
+    def get_data(self, instance):
         return AnalyticCourseSerializer(instance=instance, many=True, context=self.context).data
 
 
