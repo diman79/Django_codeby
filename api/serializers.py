@@ -87,10 +87,10 @@ class AnalyticCourseSerializer(Serializer):
 
     def get_percent_passed(self, instance) -> float:
         course_id = instance.course.id
-        students = Tracking.objects.filter(lesson__course=instance.course.id).values('user').distinct()
+        students = Tracking.objects.filter(lesson__course=course_id).values('user').distinct()
         users_percent = list()
         for id in range(len(students)):
-            percents = Tracking.objects.filter(lesson__course=instance.course.id, user=students[id]['user'])\
+            percents = Tracking.objects.filter(lesson__course=course_id, user=students[id]['user'])\
                 .aggregate(total=Count('lesson'), fact=Sum('passed'))
             user_percent = float(percents['fact'] / percents['total'] * 100)
             users_percent.append(user_percent)
