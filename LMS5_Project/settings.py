@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     # 'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
+    # 'django.middleware.cache.FetchFromCacheMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -68,11 +68,14 @@ MIDDLEWARE = [
 # Session settings
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 SESSION_CACHE_ALIAS = 'session_store'
-SESSION_FILE_PATH = BASE_DIR / 'session'
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = False
+
+# SESSION_FILE_PATH = BASE_DIR / 'session'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # при закрытии браузера удаляет файлы сессии
 SESSION_COOKIE_AGE = 3000
 SESSION_SAVE_EVERY_REQUEST = False
-SESSION_COOKIE_SAMESITE = 'Strict'
+# SESSION_COOKIE_SAMESITE = 'Strict'
 
 # Custom setting for remember user after logged
 REMEMBER_KEY = 'is_remember'

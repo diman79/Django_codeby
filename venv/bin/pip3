@@ -1,4 +1,4 @@
-#!/home/diman/PyCharmProjects/LMS5_Project/venv/bin/python
+#!/home/diman/PycharmProjects/LMS5_Project/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

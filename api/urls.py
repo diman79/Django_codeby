@@ -14,4 +14,8 @@ urlpatterns = [
 
     path('reviews/', reviews, name='reviews'),
     path('reviews/<int:review_id>', reviews_id, name='reviews_id'),
+
+    path('analytics/', analytics, name='analytics'),
+
+    path('users/', users, name='users'),
 ]
