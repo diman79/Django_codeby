@@ -66,6 +66,20 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+    'URL_FORMAT_OVERRIDE': 'to',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 3,
+    'ORDERING_PARAM': 'order_by',
+    'DATE_INPUT_FORMATS': [
+        ('%d.%m.%Y', ),
+    ],
+    'DATE_FORMAT': '%d.%m.%Y',
+}
 
 # Session settings
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'

@@ -1,13 +1,76 @@
 import django.db
 from django.db.models import ObjectDoesNotExist
 from rest_framework.decorators import api_view
+from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.views import APIView, get_view_name, get_view_description
+from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer, TemplateHTMLRenderer, AdminRenderer
 from learning.models import Course, Lesson, Tracking, Review
 from .serializers import *
 from .analytics import AnalyticReport
 from auth_app.models import User
+from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.filters import SearchFilter, OrderingFilter
 # Create your views here.
+
+
+class CourseListAPIView(ListAPIView):
+    """
+        Информация о всех курсах, размещенных на платформе LMS
+
+    """
+
+    name = 'Список курсов'
+    serializer_class = CourseSerializer2
+    pagination_class = PageNumberPagination
+    filter_backends = (SearchFilter, OrderingFilter, )
+    search_fields = ('title', 'description', 'authors__first_name', 'authors__last_name', 'start_date', )
+    ordering_fields = ('start_date', 'price', )
+    ordering = 'title'
+    # queryset = Course.objects.all()
+
+    def get_queryset(self):
+        return Course.objects.all()
+
+
+class CourseRetrieveAPIView(RetrieveAPIView):
+    """
+    Получение курса по id, переданному в URL
+
+    """
+
+    name = 'Курс'
+    serializer_class = CourseSerializer2
+    lookup_field = 'id'
+    lookup_url_kwarg = 'course_id'
+
+    def get_queryset(self):
+        return Course.objects.all()
+
+
+class CourseAPIView(APIView):
+    """
+    Информация о всех курсах, размещенных на платформе LMS
+
+    """
+
+    name = 'Список курсов'
+    http_method_names = ['get', 'options',]
+    parser_classes = (JSONParser, MultiPartParser, FormParser, )
+    renderer_classes = (JSONRenderer, BrowsableAPIRenderer, TemplateHTMLRenderer, AdminRenderer, )
+
+    def get(self, request):
+        courses_ = Course.objects.all()
+        courses_serializer = CourseSerializer2(instance=courses_, many=True).data
+        return Response(data=courses_serializer, template_name='index.html', status=status.HTTP_200_OK)
+
+    # def get_view_name(self):
+      #  return 'Список курсов'
+
+    # def get_view_description(self, html=False):
+       # return 'Информация о всех курсах, размещенных на платформе LMS'
 
 
 @api_view(["GET", "POST"])

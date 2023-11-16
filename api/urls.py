@@ -3,8 +3,8 @@ from .views import *
 
 
 urlpatterns = [
-    path('courses/', courses, name='courses'),
-    path('courses/<int:course_id>', courses_id, name='courses_id'),
+    path('courses/', CourseListAPIView.as_view(), name='courses'),
+    path('courses/<int:course_id>', CourseRetrieveAPIView.as_view(), name='courses_id'),
 
     path('lessons/', lessons, name='lessons'),
     path('lessons/<int:lesson_id>', lessons_id, name='lessons_id'),
