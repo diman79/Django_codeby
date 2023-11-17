@@ -59,12 +59,12 @@ class CourseAPIView(APIView):
     name = 'Список курсов'
     http_method_names = ['get', 'options',]
     parser_classes = (JSONParser, MultiPartParser, FormParser, )
-    renderer_classes = (JSONRenderer, BrowsableAPIRenderer, TemplateHTMLRenderer, AdminRenderer, )
+    renderer_classes = (JSONRenderer, BrowsableAPIRenderer, AdminRenderer, )
 
     def get(self, request):
         courses_ = Course.objects.all()
         courses_serializer = CourseSerializer2(instance=courses_, many=True).data
-        return Response(data=courses_serializer, template_name='index.html', status=status.HTTP_200_OK)
+        return Response(data=courses_serializer, status=status.HTTP_200_OK)
 
     # def get_view_name(self):
       #  return 'Список курсов'
