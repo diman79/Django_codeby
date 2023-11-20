@@ -1,6 +1,6 @@
-from django.urls import path
+from django.urls import path, include
 from .views import *
-
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('courses/', CourseListAPIView.as_view(), name='courses'),
@@ -18,4 +18,9 @@ urlpatterns = [
     path('analytics/', analytics, name='analytics'),
 
     path('users/', users, name='users'),
+
+
+    path('authentication/', include('rest_framework.urls')),
+    path('generate-token/', obtain_auth_token, name='generate-token'),
+    path('users-for-admin/', UserForAdminView.as_view(), name='users-for-admin'),
 ]

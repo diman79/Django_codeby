@@ -7,6 +7,12 @@ from datetime import datetime
 from rest_framework.views import Response
 
 
+class UserAdminSerializer(ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = '__all__'
+
 
 class UserSerializer(ModelSerializer):
     class Meta:
