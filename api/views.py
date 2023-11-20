@@ -10,7 +10,7 @@ from learning.models import Course, Lesson, Tracking, Review
 from .serializers import *
 from .analytics import AnalyticReport
 from auth_app.models import User
-from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView, CreateAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView, CreateAPIView, RetrieveDestroyAPIView
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.authentication import BaseAuthentication, TokenAuthentication, RemoteUserAuthentication, BasicAuthentication
@@ -41,6 +41,16 @@ class CourseCreateView(CreateAPIView):
         serializer.save(authors=(self.request.user, ))
 
 
+class CourseDeleteView(RetrieveDestroyAPIView):
+    name='Удалить курс'
+    serializer_class = CourseSerializer2
+    lookup_field = "id"
+    lookup_url_kwarg = "course_id"
+    authentication_classes = (BasicAuthentication, )
+    permission_classes = (IsAuthor, )
+
+    def get_queryset(self):
+        return Course.objects.all()
 
 class CourseListAPIView(ListAPIView):
     """

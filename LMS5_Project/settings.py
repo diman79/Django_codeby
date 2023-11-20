@@ -76,6 +76,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
+    'DEFAULT_PERMISSION_CLASSES': [
+    ],
+
     'URL_FORMAT_OVERRIDE': 'to',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 3,
