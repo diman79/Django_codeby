@@ -74,7 +74,6 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
     'URL_FORMAT_OVERRIDE': 'to',
@@ -87,9 +86,6 @@ REST_FRAMEWORK = {
     'DATE_FORMAT': '%d.%m.%Y',
 }
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.RemoteUserBackend',
-]
 
 # Session settings
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'

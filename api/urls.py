@@ -23,4 +23,5 @@ urlpatterns = [
     path('authentication/', include('rest_framework.urls')),
     path('generate-token/', obtain_auth_token, name='generate-token'),
     path('users-for-admin/', UserForAdminView.as_view(), name='users-for-admin'),
+    path('courses/create/', CourseCreateView.as_view(), name='courses_create'),
 ]

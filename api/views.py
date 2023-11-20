@@ -10,11 +10,12 @@ from learning.models import Course, Lesson, Tracking, Review
 from .serializers import *
 from .analytics import AnalyticReport
 from auth_app.models import User
-from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView, CreateAPIView
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.filters import SearchFilter, OrderingFilter
-from rest_framework.authentication import BaseAuthentication, TokenAuthentication, RemoteUserAuthentication
+from rest_framework.authentication import BaseAuthentication, TokenAuthentication, RemoteUserAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAdminUser
+from .permission import IsAuthor
 # Create your views here.
 
 
@@ -22,12 +23,23 @@ class UserForAdminView(ListCreateAPIView):
     name = 'Список пользователей LMS Codeby'
     serializer_class = UserAdminSerializer
     pagination_class = PageNumberPagination
-    authentication_classes = (BaseAuthentication, )
+    authentication_classes = (BasicAuthentication, )
     permission_classes = (IsAdminUser, )
     renderer_classes = (AdminRenderer, )
 
     def get_queryset(self):
         return User.objects.all()
+
+
+class CourseCreateView(CreateAPIView):
+    name = 'Создать курс'
+    serializer_class = CourseSerializer2
+    permission_classes = (IsAuthor, )
+    authentication_classes = (BasicAuthentication, )
+
+    def perform_create(self, serializer):
+        serializer.save(authors=(self.request.user, ))
+
 
 
 class CourseListAPIView(ListAPIView):

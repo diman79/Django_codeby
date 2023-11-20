@@ -28,7 +28,7 @@ class CourseSerializer2(ModelSerializer):
     # authors = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     # authors = serializers.StringRelatedField(many=True)
     # authors = serializers.SlugRelatedField(slug_field='email', many=True, read_only=True)
-    authors = UserSerializer(many=True)
+    authors = UserSerializer(many=True, read_only=True)
 
     class Meta:
         model = Course
