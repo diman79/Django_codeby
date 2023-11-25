@@ -1,3 +1,4 @@
+from rest_framework.relations import PrimaryKeyRelatedField
 from rest_framework.serializers import ModelSerializer, Serializer
 from rest_framework import serializers
 from learning.models import Course, Lesson, Tracking, Review
@@ -221,7 +222,7 @@ class CoursePKPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
 
 
 class AuthorTrackingSerializer(StudentTrackingSerializer):
-    user = CoursePKPrimaryKeyRelatedField(queryset=User.objects.all(), source='user.get_full_name',
+    user = PrimaryKeyRelatedField(queryset=User.objects.all(), source='user.get_full_name',
                                           label='Ученик')
 
     passed = serializers.BooleanField(label='Пройден?')
