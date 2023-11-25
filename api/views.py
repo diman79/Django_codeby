@@ -85,6 +85,7 @@ class StudentTrackingSerializer(ModelSerializer):
 
 
 class TrackingStudentViewSet(ModelViewSet):
+    http_method_names = ('get', 'post', 'options',)
     serializer_class = StudentTrackingSerializer
     permission_classes = (IsAuthenticated, IsStudent, )
     lookup_field = 'lesson__course'
@@ -138,6 +139,7 @@ class AuthorTrackingSerializer(StudentTrackingSerializer):
 
 
 class TrackingAuthorViewSet(TrackingStudentViewSet):
+    http_method_names = ('get', 'post', 'patch', 'options', )
     serializer_class = AuthorTrackingSerializer
     permission_classes = (IsAuthenticated, IsAuthor, )
     filter_backends = (SearchFilter, OrderingFilter, )
