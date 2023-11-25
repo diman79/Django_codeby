@@ -8,7 +8,6 @@ from rest_framework.views import Response
 
 
 class UserAdminSerializer(ModelSerializer):
-
     class Meta:
         model = User
         fields = '__all__'
@@ -36,7 +35,6 @@ class CourseSerializer2(ModelSerializer):
 
 
 class LessonSerializer2(ModelSerializer):
-
     course = serializers.StringRelatedField(many=False)
 
     class Meta:
@@ -54,7 +52,6 @@ class TrackingSerializer2(ModelSerializer):
 
 
 class ReviewSerializer2(ModelSerializer):
-
     course = serializers.StringRelatedField(many=False)
 
     class Meta:
@@ -87,9 +84,9 @@ class AnalyticCourseSerializer(Serializer):
         return f"{request.scheme}://{request.META['HTTP_HOST']}{instance.course.get_absolute_url()}"
 
     def get_count_students(self, instance) -> int:
-        total_students = Tracking.objects\
-            .filter(lesson__course=instance.course.id)\
-            .values('lesson__course')\
+        total_students = Tracking.objects \
+            .filter(lesson__course=instance.course.id) \
+            .values('lesson__course') \
             .aggregate(Count('user', distinct=True))
         return total_students['user__count']
 
@@ -98,7 +95,7 @@ class AnalyticCourseSerializer(Serializer):
         students = Tracking.objects.filter(lesson__course=course_id).values('user').distinct()
         users_percent = list()
         for id in range(len(students)):
-            percents = Tracking.objects.filter(lesson__course=course_id, user=students[id]['user'])\
+            percents = Tracking.objects.filter(lesson__course=course_id, user=students[id]['user']) \
                 .aggregate(total=Count('lesson'), fact=Sum('passed'))
             user_percent = float(percents['fact'] / percents['total'] * 100)
             users_percent.append(user_percent)
@@ -133,7 +130,7 @@ class UserSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'password', 'email',
-                  'birthday', 'description', 'avatar', )
+                  'birthday', 'description', 'avatar',)
         extra_kwargs = {
             'password': {
                 'write_only': True,
@@ -153,7 +150,7 @@ class UserSerializer(ModelSerializer):
     def validate(self, data):
         errors = []
         name = data.get('name').split()
-        if not name or len(name) ==1:
+        if not name or len(name) == 1:
             errors.append({'name': 'Не указано имя и фамилия для нового пользователя'})
         if len(data.get('description')) > 200:
             errors.append({'description': 'Описание слишком большое (max = 200 символов)'})
@@ -163,7 +160,7 @@ class UserSerializer(ModelSerializer):
 
     def save(self, validated_data):
         *converted_dict, = map(lambda x: dict(zip(dict(validated_data).keys(), x)),
-                              zip(*dict(validated_data).values()))
+                               zip(*dict(validated_data).values()))
         validated_data = dict(*converted_dict)
         print(validated_data)
         name = validated_data.pop('name').split()
@@ -173,3 +170,66 @@ class UserSerializer(ModelSerializer):
         user.set_password(validated_data['password'][0])
         user.save()
         return user
+
+
+class TrackingListSerializer(serializers.ListSerializer):
+
+    def save(self, **kwargs):
+        course = kwargs.pop('lesson')
+        is_existed = Tracking.objects.filter(user=kwargs['user'], lesson__course__id=course).exists()
+        if is_existed:
+            raise serializers.ValidationError({'error': 'Вы уже записаны на данный курс'})
+        else:
+            lessons = Lesson.objects.filter(course__id=course)
+            records = [Tracking(lesson=lesson, user=kwargs['user'], passed=False) for lesson in lessons]
+            trackings = Tracking.objects.bulk_create(records)
+            return trackings
+
+    def update(self, instances, validated_data):
+        passed_list = list(map(lambda x: x['passed'], validated_data))
+        updated_instance = []
+
+        for id, instance in enumerate(instances):
+            instance.passed = passed_list[id]
+            updated_instance.append(instance)
+
+        Tracking.objects.bulk_update(objs=updated_instance, fields=('passed',))
+        return updated_instance
+
+
+class StudentTrackingSerializer(ModelSerializer):
+    lesson = serializers.PrimaryKeyRelatedField(queryset=Course.objects.all(), label='Курс',
+                                                source='lesson.name')
+    passed = serializers.ReadOnlyField()
+
+    class Meta:
+        model = Tracking
+        fields = ('lesson', 'passed',)
+        list_serializer_class = TrackingListSerializer
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        if isinstance(instance, Tracking):
+            data['course'] = instance.lesson.course.title
+        return data
+
+
+class CoursePKPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
+
+    def get_queryset(self):
+        return Course.objects.filter(authors=self.context['request'].user)
+
+
+class AuthorTrackingSerializer(StudentTrackingSerializer):
+    user = CoursePKPrimaryKeyRelatedField(queryset=User.objects.all(), source='user.get_full_name',
+                                          label='Ученик')
+
+    passed = serializers.BooleanField(label='Пройден?')
+
+    lesson = CoursePKPrimaryKeyRelatedField(queryset=Course.objects.all(), source='lesson.name',
+                                            label='Курс')
+
+    class Meta:
+        model = Tracking
+        fields = '__all__'
+        list_serializer_class = TrackingListSerializer

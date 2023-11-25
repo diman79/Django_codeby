@@ -42,48 +42,6 @@ class AnalyticViewSet(ViewSet):
       #  return "Аналитика"
 
 
-class TrackingListSerializer(serializers.ListSerializer):
-
-    def save(self, **kwargs):
-        course = kwargs.pop('lesson')
-        is_existed = Tracking.objects.filter(user=kwargs['user'], lesson__course__id=course).exists()
-        if is_existed:
-            raise serializers.ValidationError({'error': 'Вы уже записаны на данный курс'})
-        else:
-            lessons = Lesson.objects.filter(course__id=course)
-            records = [Tracking(lesson=lesson, user=kwargs['user'], passed=False) for lesson in lessons]
-            trackings = Tracking.objects.bulk_create(records)
-            return trackings
-
-    def update(self, instances, validated_data):
-        passed_list = list(map(lambda x: x['passed'], validated_data))
-        updated_instance = []
-
-        for id, instance in enumerate(instances):
-            instance.passed = passed_list[id]
-            updated_instance.append(instance)
-
-        Tracking.objects.bulk_update(objs=updated_instance, fields=('passed', ))
-        return updated_instance
-
-
-class StudentTrackingSerializer(ModelSerializer):
-    lesson = serializers.PrimaryKeyRelatedField(queryset=Course.objects.all(), label='Курс',
-                                                source='lesson.name')
-    passed = serializers.ReadOnlyField()
-
-    class Meta:
-        model = Tracking
-        fields = ('lesson', 'passed', )
-        list_serializer_class = TrackingListSerializer
-
-    def to_representation(self, instance):
-        data = super().to_representation(instance)
-        if isinstance(instance, Tracking):
-            data['course'] = instance.lesson.course.title
-        return data
-
-
 class TrackingStudentViewSet(ModelViewSet):
     http_method_names = ('get', 'post', 'options',)
     serializer_class = StudentTrackingSerializer
@@ -119,25 +77,6 @@ class TrackingStudentViewSet(ModelViewSet):
       #  return "Статистика прохождения курса / Ученик"
 
 
-class CoursePKPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
-
-    def get_queryset(self):
-        return Course.objects.filter(authors=self.context['request'].user)
-
-
-class AuthorTrackingSerializer(StudentTrackingSerializer):
-    passed = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), source='user.get_full_name',
-                                                label='Ученик')
-
-    lesson = CoursePKPrimaryKeyRelatedField(queryset=Course.objects.all(), source='lesson.name',
-                                                label='Курс')
-
-    class Meta:
-        model = Tracking
-        fields = '__all__'
-        list_serializer_class = TrackingListSerializer
-
-
 class TrackingAuthorViewSet(TrackingStudentViewSet):
     http_method_names = ('get', 'post', 'patch', 'options', )
     serializer_class = AuthorTrackingSerializer
@@ -168,8 +107,6 @@ class TrackingAuthorViewSet(TrackingStudentViewSet):
 
     def perform_update(self, serializer):
         serializer.update(serializer.instance, serializer.validated)
-
-
 
 
 class UserForAdminView(ListCreateAPIView):
