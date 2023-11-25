@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.decorators import action
 from rest_framework.views import APIView, get_view_name, get_view_description
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer, TemplateHTMLRenderer, AdminRenderer
 from learning.models import Course, Lesson, Tracking, Review
@@ -14,9 +15,159 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIV
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.authentication import BaseAuthentication, TokenAuthentication, RemoteUserAuthentication, BasicAuthentication
-from rest_framework.permissions import IsAdminUser
-from .permission import IsAuthor
+from rest_framework.permissions import IsAdminUser, IsAuthenticated
+from .permission import IsAuthor, IsStudent
+from rest_framework.viewsets import ViewSet, ModelViewSet
+from django.shortcuts import get_object_or_404, get_list_or_404
+
+
 # Create your views here.
+
+
+class AnalyticViewSet(ViewSet):
+    def list(self, request):
+        courses = Course.objects.all()
+        reports = [AnalyticReport(course=course) for course in courses]
+        analytic_serializer = AnalyticSerializer(reports, many=False, context={'request': request})
+        return Response(data=analytic_serializer.data, status=status.HTTP_200_OK)
+
+    @action(methods=('get', ), detail=False, url_path='(?P<course_id>[^/.]+)', name='Аналитика по курсу')
+    def detail_analytic(self, request, course_id):
+        course = get_object_or_404(Course, id=course_id)
+        reports = [AnalyticReport(course=course)]
+        analytic_serializer = AnalyticSerializer(reports, many=False, context={'request': request})
+        return Response(data=analytic_serializer.data, status=status.HTTP_200_OK)
+
+    # def get_view_name(self):
+      #  return "Аналитика"
+
+
+class TrackingListSerializer(serializers.ListSerializer):
+
+    def save(self, **kwargs):
+        course = kwargs.pop('lesson')
+        is_existed = Tracking.objects.filter(user=kwargs['user'], lesson__course__id=course).exists()
+        if is_existed:
+            raise serializers.ValidationError({'error': 'Вы уже записаны на данный курс'})
+        else:
+            lessons = Lesson.objects.filter(course__id=course)
+            records = [Tracking(lesson=lesson, user=kwargs['user'], passed=False) for lesson in lessons]
+            trackings = Tracking.objects.bulk_create(records)
+            return trackings
+
+    def update(self, instances, validated_data):
+        passed_list = list(map(lambda x: x['passed'], validated_data))
+        updated_instance = []
+
+        for id, instance in enumerate(instances):
+            instance.passed = passed_list[id]
+            updated_instance.append(instance)
+
+        Tracking.objects.bulk_update(objs=updated_instance, fields=('passed', ))
+        return updated_instance
+
+
+class StudentTrackingSerializer(ModelSerializer):
+    lesson = serializers.PrimaryKeyRelatedField(queryset=Course.objects.all(), label='Курс',
+                                                source='lesson.name')
+    passed = serializers.ReadOnlyField()
+
+    class Meta:
+        model = Tracking
+        fields = ('lesson', 'passed', )
+        list_serializer_class = TrackingListSerializer
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        if isinstance(instance, Tracking):
+            data['course'] = instance.lesson.course.title
+        return data
+
+
+class TrackingStudentViewSet(ModelViewSet):
+    serializer_class = StudentTrackingSerializer
+    permission_classes = (IsAuthenticated, IsStudent, )
+    lookup_field = 'lesson__course'
+    lookup_url_kwarg = 'course_id'
+
+    def get_queryset(self):
+        return Tracking.objects.filter(user=self.request.user)
+
+    def get_object(self):
+        tracking = self.get_queryset()
+        filters = {self.lookup_field: self.kwargs[self.lookup_url_kwarg]}
+        return get_list_or_404(tracking, **filters)
+
+    def retrieve(self, request, *args, **kwargs):
+        tracking = self.get_object()
+        tracking_serializers = self.get_serializer(tracking, many=True)
+        return Response(tracking_serializers.data)
+
+    @action(methods=('post', ), detail=False, name='Запись на курс')
+    def enroll(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data, many=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.instance = self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user, lesson=self.request.data['lesson'])
+
+    # def get_view_name(self):
+      #  return "Статистика прохождения курса / Ученик"
+
+
+class CoursePKPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
+
+    def get_queryset(self):
+        return Course.objects.filter(authors=self.context['request'].user)
+
+
+class AuthorTrackingSerializer(StudentTrackingSerializer):
+    passed = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), source='user.get_full_name',
+                                                label='Ученик')
+
+    lesson = CoursePKPrimaryKeyRelatedField(queryset=Course.objects.all(), source='lesson.name',
+                                                label='Курс')
+
+    class Meta:
+        model = Tracking
+        fields = '__all__'
+        list_serializer_class = TrackingListSerializer
+
+
+class TrackingAuthorViewSet(TrackingStudentViewSet):
+    serializer_class = AuthorTrackingSerializer
+    permission_classes = (IsAuthenticated, IsAuthor, )
+    filter_backends = (SearchFilter, OrderingFilter, )
+    search_fields = ('user__last_name', 'user__first_name', 'lesson__name', )
+
+    def get_queryset(self):
+        return Tracking.objects.filter(lesson__course__authors=self.request.user)
+
+    def perform_create(self, serializer):
+        data = self.request.data
+        return serializer.save(user=User.objects.get(id=data['user']), lesson=data['lesson'])
+
+    # def get_view_name(self):
+      #  return "Статистика прохождения курса / Автор"
+
+    @action(methods=('patch',), detail=False, name='Отметка о сдаче урока')
+    def update_passed(self, request, *args, **kwargs):
+        data = sorted(request.data, key=lambda x: x['id'])
+        ids = list(map(lambda x: x['id'], data))
+        instances = Tracking.objects.filter(id__in=ids).order_by('id')
+
+        serializer = self.get_serializer(instances, data=data, many=True, partial=True)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data)
+
+    def perform_update(self, serializer):
+        serializer.update(serializer.instance, serializer.validated)
+
+
 
 
 class UserForAdminView(ListCreateAPIView):
@@ -51,6 +202,7 @@ class CourseDeleteView(RetrieveDestroyAPIView):
 
     def get_queryset(self):
         return Course.objects.all()
+
 
 class CourseListAPIView(ListAPIView):
     """

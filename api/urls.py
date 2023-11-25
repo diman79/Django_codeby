@@ -1,21 +1,41 @@
 from django.urls import path, include
 from .views import *
 from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework.routers import SimpleRouter, DefaultRouter
+
+
+router = DefaultRouter(trailing_slash=True)
+router.register('analytics', AnalyticViewSet, basename='analytic')
+router.register('trackings', TrackingStudentViewSet, basename='trackings')
+router.register('trackings_for_authors', TrackingAuthorViewSet, basename='trackings_for_authors')
+
+for url in router.urls:
+    print(url)
 
 urlpatterns = [
     path('courses/', CourseListAPIView.as_view(), name='courses'),
     path('courses/<int:course_id>', CourseRetrieveAPIView.as_view(), name='courses_id'),
 
+
+
     path('lessons/', lessons, name='lessons'),
     path('lessons/<int:lesson_id>', lessons_id, name='lessons_id'),
 
-    path('trackings/', trackings, name='trackings'),
-    path('trackings/<int:tracking_id>', trackings_id, name='trackings_id'),
+    # path('trackings/', TrackingStudentViewSet.as_view(actions={'get': 'list', 'post': 'create'}), name='trackings'),
+    # path('trackings/<int:course_id>', TrackingStudentViewSet.as_view(actions={'get': 'retrieve'}), name='trackings_id'),
+
+    # path('trackings_for_authors/', TrackingAuthorViewSet.as_view(actions={'get': 'list', 'post': 'create',
+                                                                          # 'patch': 'partial_update'}), name='trackings'),
+
+    # path('trackings_for_authors/<int:course_id>', TrackingAuthorViewSet.as_view(actions={'get': 'retrieve'}),
+         #name='trackings_id'),
 
     path('reviews/', reviews, name='reviews'),
     path('reviews/<int:review_id>', reviews_id, name='reviews_id'),
 
-    path('analytics/', analytics, name='analytics'),
+    path('', include(router.urls)),
+    # path('analytics/', AnalyticViewSet.as_view(actions={'get': 'list'}), name='analytics'),
+    # path('analytics/<int:course_id>', AnalyticViewSet.as_view(actions={'get': 'retrieve'}), name='analytics_id'),
 
     path('users/', users, name='users'),
 

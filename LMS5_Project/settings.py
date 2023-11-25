@@ -77,9 +77,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
     ],
-
     'URL_FORMAT_OVERRIDE': 'to',
+    'FORMAT_SUFFIX_KWARG': 'to',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 3,
     'ORDERING_PARAM': 'order_by',
