@@ -222,7 +222,7 @@ class CoursePKRelatedField_(serializers.PrimaryKeyRelatedField):
 
 
 class AuthorTrackingSerializer(StudentTrackingSerializer):
-    user = PrimaryKeyRelatedField(queryset=User.objects.all(), source='user.get_full_name',
+    user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), source='user.get_full_name',
                                           label='Ученик')
 
     passed = serializers.BooleanField(label='Пройден?')
