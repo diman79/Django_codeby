@@ -60,7 +60,7 @@ class ReviewSerializer2(ModelSerializer):
         fields = '__all__'
 
 
-class AnalyticCourseSerializer(Serializer):
+class AnalyticCourseSerializer2(Serializer):
     # date = serializers.SerializerMethodField()
     course = serializers.SerializerMethodField()
     views = serializers.SerializerMethodField()
@@ -119,7 +119,7 @@ class AnalyticSerializer(Serializer):
         return datetime.now()
 
     def get_data(self, instance):
-        return AnalyticCourseSerializer(instance=instance, many=True, context=self.context).data
+        return AnalyticCourseSerializer2(instance=instance, many=True, context=self.context).data
 
 
 class UserSerializer(ModelSerializer):
@@ -215,7 +215,7 @@ class StudentTrackingSerializer(ModelSerializer):
         return data
 
 
-class CoursePKPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
+class CoursePKRelatedField(serializers.PrimaryKeyRelatedField):
 
     def get_queryset(self):
         return Course.objects.filter(authors=self.context['request'].user)
@@ -227,7 +227,7 @@ class AuthorTrackingSerializer(StudentTrackingSerializer):
 
     passed = serializers.BooleanField(label='Пройден?')
 
-    lesson = CoursePKPrimaryKeyRelatedField(queryset=Course.objects.all(), source='lesson.name',
+    lesson = CoursePKRelatedField(queryset=Course.objects.all(), source='lesson.name',
                                             label='Курс')
 
     class Meta:

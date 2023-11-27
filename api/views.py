@@ -71,7 +71,7 @@ class TrackingStudentViewSet(ModelViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user, lesson=self.request.data['lesson'])
+        return serializer.save(user=self.request.user, lesson=self.request.data['lesson'])
 
     # def get_view_name(self):
       #  return "Статистика прохождения курса / Ученик"
@@ -106,7 +106,7 @@ class TrackingAuthorViewSet(TrackingStudentViewSet):
         return Response(serializer.data)
 
     def perform_update(self, serializer):
-        serializer.update(serializer.instance, serializer.validated)
+        serializer.update(serializer.instance, serializer.validated_data)
 
 
 class UserForAdminView(ListCreateAPIView):
