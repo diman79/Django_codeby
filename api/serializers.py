@@ -215,7 +215,7 @@ class StudentTrackingSerializer(ModelSerializer):
         return data
 
 
-class CoursePKRelatedField(serializers.PrimaryKeyRelatedField):
+class CoursePKRelatedField_(serializers.PrimaryKeyRelatedField):
 
     def get_queryset(self):
         return Course.objects.filter(authors=self.context['request'].user)
@@ -227,7 +227,7 @@ class AuthorTrackingSerializer(StudentTrackingSerializer):
 
     passed = serializers.BooleanField(label='Пройден?')
 
-    lesson = CoursePKRelatedField(queryset=Course.objects.all(), source='lesson.name',
+    lesson = CoursePKRelatedField_(queryset=Course.objects.all(), source='lesson.name',
                                             label='Курс')
 
     class Meta:
