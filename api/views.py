@@ -286,7 +286,8 @@ def users(request):
         return Response(data=user_serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'POST':
         print(request.FILES, request.data)
-        user_serializer = UserSerializer(data=request.data)
+        data = request.data.copy()
+        user_serializer = UserSerializer(data=data)
         try:
             if user_serializer.is_valid(raise_exception=True):
                 user_serializer.instance = user_serializer.save(user_serializer.validated_data)

@@ -17,7 +17,7 @@ class UserAdminSerializer(ModelSerializer):
 class UserSerializer(ModelSerializer):
     class Meta:
         model = User
-        # fields = ('first_name', 'last_name', )
+        #fields = ('first_name', 'last_name', 'birthday', "description", "email")
         fields = '__all__'
 
     def to_representation(self, instance):
